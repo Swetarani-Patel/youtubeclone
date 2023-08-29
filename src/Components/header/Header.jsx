@@ -50,7 +50,6 @@ navigate(`/search/${input}`)
           src={storedata?.user?.photoURL}
           alt=""
 
-          
         />
       </div>
     </div>
