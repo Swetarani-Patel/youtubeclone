@@ -1,0 +1,47 @@
+@import '../../_base.scss';
+.videoMetaData{
+    &__top{
+        span{
+            cursor: pointer;
+        }
+    }
+    &__channel{
+        border-top: 0.2px solid $border-color;
+        border-bottom: 0.2px solid $border-color;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        button{
+            background-color: white;
+            color: black;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            width: 15%;
+            &.btn-gray{
+                background-color: #6a696987;
+            }
+            &:hover{
+                color: #fff;
+            }
+            &:focus{
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    
+    &__description{
+        font-size: 0.9rem;
+        white-space: pre-line;
+        border-bottom: 0.2px solid $border-color;
+        .showMoreText{
+            text-decoration: none;
+            display: block;
+            margin: 1rem 0;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+}

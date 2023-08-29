@@ -1,0 +1,36 @@
+// @import '../../_base.scss';
+.channelHeader{
+    border: 1px solid #4c4c4c;
+
+    &__left{
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+    }
+    .channelHeader_details{
+        margin-left: 20px;
+    }
+    button{
+        text-transform: uppercase;
+        background-color: red;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.4rem;
+        border: none;
+    }
+}
+@media(max-width:520px){
+    .channelHeader{
+        padding: 1rem 0;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        h3{
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+}
