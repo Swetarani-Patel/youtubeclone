@@ -6,9 +6,10 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { IoMdNotifications } from "react-icons/io";
 import { MdApps } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = ({ handl }) => {
   const [input, setInput] = useState('');
-
+ const storedata = useSelector((state)=>state.auth);
   const navigate = useNavigate();
 const handleSubmit = (e)=>{
 e.preventDefault();
@@ -46,7 +47,7 @@ navigate(`/search/${input}`)
         <IoMdNotifications size={28} />
         <MdApps size={28} />
         <img
-          src="https://lh3.googleusercontent.com/a/AAcHTtcJd5Af9JghwtlsKggJek5nsXKeGKJLAvpLwDgCibMCn_BK=s96-c"
+          src={storedata?.user?.photoURL}
           alt=""
         />
       </div>
