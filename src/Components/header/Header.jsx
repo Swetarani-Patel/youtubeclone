@@ -49,6 +49,8 @@ navigate(`/search/${input}`)
         <img
           src={storedata?.user?.photoURL}
           alt=""
+
+          
         />
       </div>
     </div>
