@@ -1,8 +1,10 @@
-  
-import { useState } from 'react';
-import './_category.scss'
-import { useDispatch } from 'react-redux';
-import { getPopularVideos, getVideosCategory } from '../../Redux/actions/video.action';
+import { useState } from "react";
+import "./_category.scss";
+import { useDispatch } from "react-redux";
+import {
+  getPopularVideos,
+  getVideosCategory,
+} from "../../Redux/actions/video.action";
 
 const keywords = [
   "All",
@@ -25,23 +27,29 @@ const keywords = [
 ];
 
 const Categories = () => {
-  const[activeElement,setactiveElement] = useState("All")
-const dispatch  = useDispatch()
-  function handleClick(value){
-    setactiveElement(value)
-    if(value === 'All'){
-      dispatch(getPopularVideos())
-    }else{
-      dispatch(getVideosCategory(value))
+  const [activeElement, setactiveElement] = useState("All");
+  const dispatch = useDispatch();
+  function handleClick(value) {
+    setactiveElement(value);
+    if (value === "All") {
+      dispatch(getPopularVideos());
+    } else {
+      dispatch(getVideosCategory(value));
     }
   }
   return (
     <div className="CategoriesBar">
-      {
-        keywords.map((value,index)=> <span  key={index} className={activeElement===value?"active":""} onClick={()=> handleClick(value)}>{value}</span> )
-      }
+      {keywords.map((value, index) => (
+        <span
+          key={index}
+          className={activeElement === value ? "active" : ""}
+          onClick={() => handleClick(value)}
+        >
+          {value}
+        </span>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;
